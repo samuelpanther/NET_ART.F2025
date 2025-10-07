@@ -1,0 +1,359 @@
+/* =======================
+   GENERAL PAGE STYLES
+   ======================= */
+/* Sets up the main page background, size, and scrolling */
+body {
+  position: relative;
+  width: 5000px; /* large area for scrolling effect */
+  height: 5000px;
+  background-color: black;
+  background-image: url("images/sparkle.gif"); /* sparkle background */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* keeps background in place */
+  overflow: auto; /* allows scrolling */
+}
+
+/*
+Bigwebsite assignment: CSS properties written in an external stylesheet
+font-size -
+font-family -
+font-style -
+color -
+background-color -
+background-image -
+font-weight -
+text-decoration -
+text-align -
+border -
+width -
+height -
+margin -
+padding -
+opacity -
+*/
+
+/* =======================
+   H1 STYLES & ANIMATIONS
+   ======================= */
+/* Container to center H1 in viewport */
+.h1-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none; /* allows scrolling through the H1 */
+  z-index: 10;
+  width: 100%;
+  text-align: center;
+}
+
+/* H1 text styling */
+#headermemory {
+  font-size: 40px;
+  font-family: cursive, Times, serif;
+  color: cornsilk;
+  margin: 0;
+  opacity: 0; /* starts invisible */
+  animation: fadeInH1 1s ease-out forwards, floatH1 4s ease-in-out infinite;
+}
+
+/* Optional underline effect for emphasis */
+#headermemory span {
+  text-decoration: underline dotted;
+}
+
+/* H1 fade-in animation */
+@keyframes fadeInH1 {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* H1 gentle float motion for subtle animation */
+@keyframes floatH1 {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+/* =======================
+   H2 STYLES & ANIMATIONS
+   ======================= */
+/* Shared H2 styling */
+.h2-style {
+  font-family: cursive, Times, serif;
+  font-size: 28px;
+  color: rgb(212, 197, 136);
+  text-align: left;
+  margin: 0;
+  opacity: 0; /* start invisible */
+  transform: translateY(20px); /* start slightly lower */
+  animation: fadeInUp 1s ease-out forwards;
+  transition:
+    color 0.3s ease-in-out,
+    font-weight 0.3s ease-in-out,
+    transform 0.3s ease-in-out,
+    text-shadow 0.3s ease-in-out;
+}
+
+/* Remove underline from H2 links */
+a h2.h2-style {
+  text-decoration: none;
+}
+
+/* Style for visited links */
+a:visited h2.h2-style {
+  color: rgb(197, 177, 95);
+}
+
+/* Hover effect for H2 */
+a:hover h2.h2-style {
+  color: rgb(255, 230, 150);
+  font-weight: bold;
+  text-shadow: 0 0 8px rgba(255, 230, 150, 0.6);
+  transform: translateY(-6px) scale(1.03);
+}
+
+/* H2 fade-in animation */
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Shared H3 styling */
+.h3-style {
+  font-family: cursive, Times, serif;
+  font-size: 18px;
+  color: rgb(212, 197, 136);
+  text-align: left;
+  margin: 0;
+  opacity: 0; /* start invisible */
+  transform: translateY(20px); /* start slightly lower */
+  animation: fadeInUp 1s ease-out forwards;
+  transition:
+    color 0.3s ease-in-out,
+    font-weight 0.3s ease-in-out,
+    transform 0.3s ease-in-out,
+    text-shadow 0.3s ease-in-out;
+}
+
+/* =======================
+   SPECIFIC ELEMENT POSITIONING
+   ======================= */
+#poem {
+  position: absolute;
+  top: 1500px;
+  left: 285px;
+  transform: none;
+}
+
+#emotion {
+  position: absolute;
+  top: 3500px;
+  right: 200px;
+  transform: none;
+}
+
+#t-shirt {
+  position: absolute;
+  top: 175px;
+  right: 300px;
+  transform: none;
+}
+
+#story {
+  position: absolute;
+  top: 4800px; 
+  right: 150px;
+  transform: none;
+}
+
+#boltanski {
+  position: absolute; 
+  top: 3500px;
+  left: 100px; 
+  transform: none;
+}
+
+#place-bed {
+  position: absolute;
+  top: 800px;
+  right: 600px; 
+  transform: none;
+}
+
+/*======= caress and touch section ====*/
+#caress {
+  position: absolute;
+  top: 100px;
+  left: 150px;
+  transform: none;
+}
+/*h3 sentence*/
+#cheek {
+  position: absolute;
+  top: 150px;
+  left: 30px;
+  transform: none;
+}
+/*======= END caress and touch section ====*/
+
+
+
+/* =======================
+   MOON IMAGE + CAPTION SECTION (fixed to bottom-left of scrollable page)
+   ======================= */
+/*
+   This version:
+   - Uses absolute positioning (scrollable)
+   - Places moon on the bottom-left of the 5000px page
+   - Keeps right-side captions untouched
+   - Adds smooth fade and float
+*/
+
+.moon-rynek-container {
+  position: absolute;        /* anchored within the scrollable body */
+  top: 4700px;            
+  left: 100px;               /* distance from very left of page */
+  display: flex;
+  flex-direction: column;    /* stack image and caption vertically */
+  align-items: center;       /* center caption under image */
+  gap: 10px;
+  z-index: 5;                /* lower z-index to avoid covering right-side text */
+  opacity: 0;                /* start invisible */
+  animation: fadeInMoon 2s ease-out forwards;
+}
+
+/* Moon image: fades and gently floats */
+.moon-rynek-img {
+  border-radius: 85%;
+  width: 300px;             
+  height: auto;
+  opacity: 0.6;              /* transparent base look */
+  animation: floatMoon 6s ease-in-out infinite, breatheOpacity 8s ease-in-out infinite;
+  transition: opacity 0.8s ease, transform 0.5s ease;
+}
+
+/* Hover brightens and scales slightly */
+.moon-rynek-container:hover .moon-rynek-img {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+/* Caption below the image, inherits .h2-style */
+.moon-caption {
+  opacity: 0.8;
+  animation: floatMoon 6s ease-in-out infinite, breatheOpacity 8s ease-in-out infinite;
+  animation-delay: 0.3s; /* offset for natural feel */
+}
+
+/* Fade-in for both image and caption */
+@keyframes fadeInMoon {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Gentle floating motion */
+@keyframes floatMoon {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+/* Soft breathing opacity pulse */
+@keyframes breatheOpacity {
+  0%, 100% { opacity: 0.6; }
+  50%      { opacity: 0.85; }
+}
+
+/*SOUND SECTION STORY TRY*/
+#sound-section {
+        position: absolute;
+        top: 4950px; /* adjust vertical placement as needed */
+        right: 50px;              
+        transform: none;
+        transform: none; /* truly center the section */
+        display: flex;
+        flex-direction: column; /* stack SoundCloud above the text */
+        align-items: center;    /* center both horizontally */
+      }
+
+/* SoundCloud player container */
+     
+      .soundcloud-container {
+       border: .2px solid rgb(212, 197, 136);
+       padding: 7px;
+       border-radius: 8px;
+       background-color: transparent;
+       width: fit-content;
+       box-sizing: border-box;
+       margin-bottom: 20px; /* 20px gap between player and header */
+
+      } 
+
+
+
+
+
+/* =======================
+   FOR EMOTION.html - CENTERED FLOATING IMAGE WITH DYNAMIC SCALE ON EMOTIONS PAGE
+   ======================= */
+/* Container for the image, keeps it centered in viewport */
+.centered-image-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed; /* stays centered even on scroll */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 20;
+}
+/* Image styling: fade-in + floating + subtle scale oscillation */
+.centered-image-link img {
+  opacity: 0.0; /* starts invisible */
+  display: block;
+  transition: opacity 0.8s ease-in-out, transform 0.5s ease-in-out;
+  animation: fadeInFloatImage 2s ease-out forwards, floatAndScale 4s ease-in-out infinite;
+}
+
+/* Hover effect: fully opaque, slightly zoomed, pause float */
+.centered-image-link:hover img {
+  opacity: 1 !important; /* fully opaque on hover */
+  transform: translateY(0) scale(1.05); /* stops float and zooms slightly */
+}
+
+/* Keyframes: fade-in to semi-transparent default */
+@keyframes fadeInFloatImage {
+  0% { opacity: 0; }
+  100% { opacity: 0.5; } /* default semi-transparent */
+}
+
+/* Keyframes: gentle float + subtle scaling oscillation */
+@keyframes floatAndScale {
+  0% { transform: translateY(0) scale(1); }
+  25% { transform: translateY(-5px) scale(1.02); }
+  50% { transform: translateY(-10px) scale(1); }
+  75% { transform: translateY(-5px) scale(1.02); }
+  100% { transform: translateY(0) scale(1); }
+}
+
+
+
+
+
+/* =======================
+   BEST PRACTICES NOTES
+   =======================
+1. Use descriptive class names (e.g., .centered-image-link) for clarity.
+2. Keep related keyframes near their elements for easy maintenance.
+3. Use transitions for hover effects to make interactions smooth.
+4. Combine animations and transitions carefully to avoid conflicts.
+5. Use comments liberally; they help you (and others) understand structure and logic.
+6. Test folder paths and relative links carefully—always relative to the HTML file using them.
+7. Avoid !important unless necessary; here it’s used to override animation opacity on hover.
+8. Organize CSS in sections: General styles, H1, H2, specific positioning, and unique components.
+9. For subtle, magical effects, combine slight movement with scale oscillation to add visual depth.
+10. Use ease-in-out for opacity and transform transitions to make hover interactions feel natural.
+*/
