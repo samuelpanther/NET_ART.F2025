@@ -1,0 +1,224 @@
+* { margin: 0;
+   padding:0; }
+
+.mydiv {
+  background-color:black;
+  position: relative;
+  height:100vh;
+  width: 100%;
+  overflow: hidden; 
+  
+}
+
+.grid-container {
+  display: grid;
+  position: relative; 
+  grid-template-columns: repeat(21, 1fr);
+  grid-template-rows: repeat(1,auto);
+  height: 100vh;
+  width: 100%;
+}
+
+.overlay-grid {
+  position: absolute;
+  display: grid;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 90vh;
+  width: 95%;
+  grid-template-columns: repeat(21, 1fr);
+  z-index: 2;
+}
+
+.overlay-grid2 {
+  position: absolute; 
+  display: grid; 
+  top: 50%; 
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh; 
+  width: 87.5%;
+  grid-template-columns: repeat(21, 1fr);
+  z-index: 3;
+}
+
+.overlay-grid3 {
+  position: absolute;
+  display: grid; 
+  top: 50%;
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+  height: 70vh; 
+  width: 80%; 
+  grid-template-columns: repeat(21, 1fr);
+  z-index: 4; 
+}
+
+.overlay-grid4 {
+  position: absolute; 
+  display: grid;
+  top: 50%; 
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 60vh; 
+  width: 72.5%;
+  grid-template-columns: repeat(21, 1fr);
+  z-index: 5;
+}
+
+.overlay-grid5 {
+  position: absolute; 
+  display: grid; 
+  top: 50%; 
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 50vh; 
+  width: 65%; 
+  grid-template-columns: repeat(21, 1fr);
+  z-index: 6; 
+}
+
+.overlay-grid6 {
+  position: absolute; 
+  display: grid; 
+  top: 50%;
+  left: 50%; 
+  transform: translate(-50%, -50%);
+  height: 40vh; 
+  width: 57.5%;
+  grid-template-columns: repeat(21, 1fr);
+  z-index: 7; 
+}
+
+.overlay-grid7 {
+  position: absolute;
+  display: grid; 
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%);
+  height: 30vh; 
+  width: 50%; 
+  grid-template-columns: repeat(21, 1fr); 
+  z-index: 8; 
+}
+
+.overlay-grid8 {
+  position: absolute;
+  display: grid; 
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%);
+  height: 20vh; 
+  width: 42.5%; 
+  grid-template-columns: repeat(21, 1fr); 
+  z-index: 9; 
+}
+
+.overlay-grid9 {
+  position: absolute; 
+  display: grid;
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%,-50%);
+  height: 10vh; 
+  width: 35%; 
+  grid-template-columns: repeat(21, 1fr); 
+  z-index: 10;
+}
+
+.overlay-grid10 {
+  position: absolute; 
+  display: grid;
+  top: 50%;
+  left: 50%; 
+  transform: translate(-50%, -50%);
+  height: 7vh;
+  width: 27.5%;
+  grid-template-columns: repeat(21, 1fr);
+  z-index: 11;
+}
+  
+.overlay-grid11 {
+  position: absolute; 
+  display: grid;
+  top: 50%;
+  left: 50%; 
+  transform: translate(-50%, -50%);
+  height: 5vh;
+  width: 20%;
+  grid-template-columns: repeat(21, 1fr);
+  z-index: 12;
+}
+
+.overlay-grid12 {
+  position: absolute; 
+  display: grid;
+  top: 50%;
+  left: 50%; 
+  transform: translate(-50%, -50%);
+  height: 3vh;
+  width: 12.5%;
+  grid-template-columns: repeat(21, 1fr);
+  z-index: 13;
+}
+
+.overlay-grid13 {
+  position: absolute; 
+  display: grid;
+  top: 50%;
+  left: 50%; 
+  transform: translate(-50%, -50%);
+  height: 1vh;
+  width: 5%;
+  grid-template-columns: repeat(21, 1fr);
+  z-index: 14;
+}
+
+.overlay-grid14 {
+  position: absolute; 
+  display: grid;
+  top: 50%;
+  left: 50%; 
+  transform: translate(-50%, -50%);
+  height: .5vh;
+  width: 2.5%;
+  grid-template-columns: repeat(21, 1fr);
+  z-index: 15;
+}
+
+.overlay-grid15 {
+  position: absolute; 
+  display: grid;
+  top: 50%;
+  left: 50%; 
+  transform: translate(-50%, -50%);
+  height: .4vh;
+  width: 1.5%;
+  grid-template-columns: repeat(21, 1fr);
+  z-index: 16;
+}
+
+.item1 { background-color: #ffffff; } 
+.item2 { background-color: #fefdff; }
+.item3 { background-color: #fdfbff; }
+.item4 { background-color: #fcf9ff; }
+.item5 { background-color: #fbf7ff; }
+.item6 { background-color: #fbf6ff; }
+.item7 { background-color: #faf4ff; }
+.item8 { background-color: #f9f2ff; }
+.item9 { background-color: #f8f0ff; }
+.item10 { background-color: #f7eeff; }
+.item11 { background-color: #f6ecff; }
+.item12 { background-color: #ddd4e6; }
+.item13 { background-color: #c5bdcc; }
+.item14 { background-color: #aca5b3; }
+.item15 { background-color: #948e99; }
+.item16 { background-color: #7b7680; }
+.item17 { background-color: #625e66; }
+.item18 { background-color: #4a474c; }
+.item19 { background-color: #312f33; }
+.item20 { background-color: #191819; }
+.item21 { background-color: #000000; }
+
+
