@@ -1,0 +1,345 @@
+
+body {
+  background-color: #ffcbf0; /* Exhibition backdrop color */
+  margin: 0;  /* Remove default browser spacing */
+  padding: 0;              
+  /*overflow: hidden;         Prevent scrolling */
+  font-family: system-ui, sans-serif;
+}
+
+/* =========================
+   MOLLY SODA TITLE 
+   ========================= */
+
+   .h1container {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  position: fixed;
+  top: 25px;
+  left: 50px;
+  pointer-events: none; /* container ignores clicks */
+}
+
+.h1container a {
+  pointer-events: auto; /* link still works */
+}
+
+/*sam moss curated by addition*/
+.h3container  {
+
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  position: fixed;
+  top: 70px;
+  left: 50px;
+  pointer-events: none; /* container ignores clicks */
+}
+
+.h4container {
+
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  position: fixed;
+  top: 875px;
+  left: 50px;
+  pointer-events: none; /* container ignores clicks */
+
+}
+
+.textcontainer {
+
+font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  position: fixed;
+  top: 875px;
+  left: 50px;
+  pointer-events: none; /* container ignores clicks */
+
+}
+
+
+/*Sam you need to come back here and really uynderstand thissssss!!!!!!!  also look up  more about museum pages and reading height etc*/
+.exhibition-overview-text {
+  position: fixed;
+
+  /* horizontal centering */
+  left: 50%;
+  transform: translateX(-50%);
+
+  /* museum-style reading height */
+  top: 35vh;
+
+  max-width: 75ch;
+  padding-inline: 1rem;
+
+  line-height: 1.6;
+  font-size: 1rem;
+
+  pointer-events: none;
+}
+
+
+/* =========================
+   EXHIBITION STAGE
+   ========================= */
+
+.exhibition-stage {
+  position: relative;       /* Establishes positioning context for portals */
+  height: 100vh;            /* Full viewport height */
+  width: 100vw;             /* Full viewport width */
+}
+
+.stage-background {
+  height: 100%;
+  width: auto;
+  display: block;
+}
+
+
+/* This frame defines the coordinate system for portals */
+.stage-frame {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+
+  height: 100vh;   /* image scales with viewport height */
+  width: auto;
+}
+/* ______________________________
+   exhibition portals - clickable Molly figures
+   =____________________________     */
+
+/* Base portal behavior */
+.portal {
+  position: absolute;       /* Positioned relative to exhibition-stage */
+  z-index: 2;               /* Above the background image */
+  display: block;           /* Makes entire image clickable */
+}
+/*========================================
+INDIVIDUAL Mollies
+===============================*/
+
+
+/* all portals - Ensure portal image fills its container */
+.portal img {
+  width: 100%;
+  height: auto;
+  display: block;
+  
+  opacity: 1;
+ 
+  /*outline: 1px dashed rgba(183, 243, 17, 0.98);   /*take this out later*/
+}
+
+/* ++++++++++++++++++
+Specific portal placement INBOX FULL
+++++++++++++++++++++++*/
+.portal-inboxfull {
+  bottom: 74%;              /* Position relative to the brushes stage */
+  left: 72%;
+  width: 95px;              /* Visual size of the portal */
+  transform: rotate(-40deg);
+}
+
+/* ++++++++++++++++++
+Specific portal placement Me & MY GURLS
+++++++++++++++++++++++*/
+
+.portal-mygurls {
+  bottom: 55%;              /* Position relative to the brushes stage */
+  left: 19%;
+  width: 95px;              /* Visual size of the portal */
+  transform: rotate(50deg);
+}
+
+
+/* ++++++++++++++++++
+Specific portal placement WANNA KNOW MY SECRET?
+++++++++++++++++++++++*/
+
+.portal-wannaknow {
+  bottom: 85%;              /* Position relative to the brushes stage */
+  left: 45%;
+  width: 70px;              /* Visual size of the portal */
+  transform: rotate(10deg);
+}
+
+/* ++++++++++++++++++
+Specific portal placement MY APOLOGY
+++++++++++++++++++++++*/
+.portal-myapology {
+  bottom: 62%;              /* Position relative to the brushes stage */
+  left: 48%;
+  width: 85px;              /* Visual size of the portal */
+  transform: rotate(10deg);
+}
+
+/* ++++++++++++++++++
+Specific portal placement Exhibition overview
+++++++++++++++++++++++*/
+
+.portal-exhibit-overview {
+
+  bottom: 23%;              /* Position relative to the brushes stage */
+  left: 68%;
+  width: 150px;              /* Visual size of the portal */
+  transform: rotate(10deg);
+
+}
+
+
+
+/*--------------------
+portal behaviors
+---------------------*/
+
+.portal:hover img {
+  opacity: .6;
+  transition: opacity 0.2s ease;
+  cursor: pointer;
+}
+
+/*+++++++++++++++++++-________
+each page -  video embeds etc - universal 
+__________________________________*/
+
+.video-embed {   
+  display: flex;
+  justify-content: center; /* horizontal centering */
+ /* align-items: center;     /* vertical centering (optional) */
+  margin-top: 115px;        /* optional spacing from title */
+  margin-bottom: 2rem; /*the space before the exhibition text*/
+  padding-inline: 1rem; /*this is supposedly good for mobile*/
+}
+
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 800px; /* adjust as needed */
+  aspect-ratio: 16 / 9;
+
+}
+
+.video-wrapper iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+ /* text styles and headings and hover links for all pages all pages*/
+
+.h2container-style {
+  position: fixed;   /* Always stays in the same place */
+  z-index: 10;        
+  top: 550px;
+  left: 50px;
+  font-family: system-ui, sans-serif;
+  pointer-events: none;
+  
+}
+
+.home-link {
+  text-decoration: none;   /* no underline */
+  color: inherit;          /* inherit h1 color */
+  display: inline-block;   /* ensures hover area fits text */
+}
+
+.home-link:visited,
+.home-link:active,
+.home-link:focus {
+  color: inherit;          /* prevent purple/blue states */
+}
+
+.home-link:hover {
+  opacity: 0.5;           /* subtle fade */
+  transition: opacity 0.2s ease;
+  cursor: pointer;
+}
+
+
+/*^^^^^^^^^^^^^^^^^^^^^^
+style for general links
+^^^^^^^^^^^^^^^^^^^^^^^^^*/
+.text a {
+  color: #f3367d;
+  text-decoration: none;
+  font-family:'Helvetica Neue', sans-serif; 
+  
+}
+
+
+.text a:visited {
+  color: #4c3d48;  ; 
+}
+
+.text a:hover {
+  color: #4c3d48;  
+  opacity: 0.5;           /* subtle fade */
+  transition: opacity 0.2s ease;
+  cursor: pointer;
+}
+
+
+
+
+/*+++++++++++++++++++++
+My Gurls page style  ------------------all these commented out things reminds you that you JUST NEEDED ONE UNIVERSAL STYLE FOR THE IDENTICAL PAGES - good learning curve tho
+++++++++++++++++++++++++++++++++ */
+
+/*these commented out aren't parallel to anything on inbox full pgae so I'm tryign to see what they are  ---------
+.mygurls-video-preview {
+  position: relative;
+  max-width: 800px;
+  margin: 115px auto 2rem;
+  cursor: pointer;
+  z-index: 5;
+}
+
+
+.mygurls-play-button-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3rem;
+  color: white;
+  text-shadow: 0 0 8px rgba(0,0,0,0.7);
+}
+*/
+/* hoping that creating the class for all video wrappers and embeds will work
+.video-embed {   
+  display: flex;
+  justify-content: center;
+  margin-top: 115px;
+  margin-bottom: 2rem;
+  padding-inline: 1rem;
+}
+
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  aspect-ratio: 16 / 9;
+}
+
+.video-wrapper iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+*/
+
+.works-full-text {
+  max-width: 80ch; 
+  margin: 0 auto 4rem;
+  padding-inline: 1rem;
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: justify;
+}
+ 
+p{
+  font-family: 'Helvetica Neue', sans-serif;
+
+ }
+
+
+
+ 
