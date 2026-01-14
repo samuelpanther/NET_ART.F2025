@@ -1,0 +1,67 @@
+body{
+    margin:0; 
+    padding:0;
+    background-color:#58585a;
+}
+
+.h1container {
+    top: 5vh; 
+    left: 5vw; 
+    position: relative; 
+}
+
+
+h1 {
+    font-family: Seravek, 'Gill Sans Nova', Ubuntu, Calibri, 'DejaVu Sans', source-sans-pro, sans-serif;
+    font-weight: 450;
+}
+
+.creditcontainer {
+    top: 1vh; 
+    left: 1vw; 
+    position: relative; 
+
+}
+
+
+p {
+    font-family: Seravek, 'Gill Sans Nova', Ubuntu, Calibri, 'DejaVu Sans', source-sans-pro, sans-serif;
+    font-weight: 250;
+}
+*/
+
+.siteplan img {
+    display: block;
+    margin: 0 auto; 
+}
+
+.siteplan {
+    position: relative; 
+    
+  width: 700px;
+  max-width: 95%;
+  margin: 2rem auto;
+}
+
+
+
+.zone1 {
+    position: absolute; 
+    top: 1005px; 
+    left: 700px; 
+    width: 50px; 
+    height: 50px; 
+
+    background: rgba(255, 0, 0, 0.3);
+    cursor: pointer; 
+}
+
+
+#previewImage {
+  position: absolute;
+  width: 500px;
+  height: auto;
+  display: none;   /* FORCE visible for testing */
+  z-index: 20;
+  border: 2px solid white;
+}
